@@ -1,35 +1,35 @@
-================================
-Chapter 6: The Django Admin Site
-================================
+=================================
+Chapter 6: O Site Admin do Django
+=================================
 
-For a certain class of Web sites, an *admin interface* is an essential part of
-the infrastructure. This is a Web-based interface, limited to trusted site
-administrators, that enables the adding, editing and deletion of site content.
-Some common examples: the interface you use to post to your blog, the backend
-site managers use to moderate user-generated comments, the tool your clients
-use to update the press releases on the Web site you built for them.
+Para alguns tipos de Web sites, uma *interface admin* é parte essencial da
+infraestrutura. Trata-se de uma interface baseada na Web e autorizada a 
+apenas alguns administradores que permite acrescentar, remover e editar conteúdo.
+Alguns exemplos mais comuns pode ser aquela interface que você usa para postar
+conteúdo no seu blog, ou o backend que os administradores do site fazem uso
+quando moderam comentários gerados por usuários.
 
-There's a problem with admin interfaces, though: it's boring to build them.
-Web development is fun when you're developing public-facing functionality, but
-building admin interfaces is always the same. You have to authenticate users,
-display and handle forms, validate input, and so on. It's boring, and it's
-repetitive.
+Mas existe um problema com as interfaces admin: são muito chatas de construir.
+O desenvolvimento Web é mais interessante quando você implementa funcionalidades
+pensadas no público, enquanto que construir interfaces admin é sempre a mesma coisa.
+Você precisa autenticar usuários, exibir e manipular formulários, validar dados de 
+entrada, e por aí vai. É maçante e repetitivo.
 
-So what's Django's approach to these boring, repetitive tasks? It does it all
-for you -- in just a couple of lines of code, no less. With Django, building an
-admin interface is a solved problem.
+E como o Django resolve essas tarefas monótonas para mim? Bem, basicamente ele
+faz tudo por você em apenas algumas linhas de código. Com o Django, construir uma
+interface admin é problema resolvido.
 
-This chapter is about Django's automatic admin interface. The feature works by
-reading metadata in your model to provide a powerful and production-ready
-interface that site administrators can start using immediately. Here, we discuss
-how to activate, use, and customize this feature.
+Este capítulo é sobre a interface admin automática do Django. Ela trabalha lendo
+metadados de um modelo visando fornecer uma interface poderosa que permite um
+administrador de Web site começar a usá-la instantaneamente. Neste capítulo,
+iremos discutir como ativar, utilizar e customizar essa interface.
 
-Note that we recommend reading this chapter even if you don't intend to use the
-Django admin site, because we introduce a few concepts that apply to all of
-Django, regardless of admin-site usage.
+NOTA: Recomendamos a leitura integral deste capítulo mesmo se você não pretende utilizar o 
+site de administrador do Django, porque alguns conceitos-chave apresentados aqui
+se aplicam a todo o Django, independentemente da sua utilização.
 
-The django.contrib packages
-===========================
+Os pacotes django.contrib 
+==========================
 
 Django's automatic admin is part of a larger suite of Django functionality
 called ``django.contrib`` -- the part of the Django codebase that contains
